@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        //check the page loaded
+        //1. 
+        jQuery (function($){//$ is a jQuery object or jQuery reprence
+            alert('ok1');
+        });
+        //2.
+        (function(){
+            alert('ok2');
+        })(jQuery);
+        $(document).ready(function(){
+            alert('ok3');
+            //$(document).on('event','id/class',function(e){
+
+           // });
+        });
+    </script>
+</body>
+</html>
