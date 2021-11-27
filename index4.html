@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing Up</title>
+    <style>
+        .parent{
+            border: 5px solid red;
+            padding: 7px;
+        }
+        .child{
+            border: 5px solid green;
+            padding: 7px;
+        }
+        .grandchild{
+            border: 5px solid lavender;
+            padding: 7px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="parent">
+        parent
+        <div class="child">
+            child1
+            <div class="grandchild">grandchild1_1</div>
+            <div class="grandchild">grandchild1_2</div>
+            <div class="grandchild">grandchild1_3</div>
+        </div>
+        <div class="child">
+            child2
+            <div class="grandchild">grandchild2_1</div>
+            <div class="grandchild">grandchild2_2</div>
+            <div class="grandchild">grandchild2_3</div>
+        </div>
+    </div>
+
+    <script>
+        //page loaded successfully
+
+        //()();
+        (function($){
+           // alert('ok');
+           //$(selector).action();
+           var x = $('.grandchild').parents();
+           x.css({'border':'5px solid blue'});
+           //console.log(x);
+        })(jQuery);
+    </script>
+</body>
+</html>
