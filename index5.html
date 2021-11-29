@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ParentUntil</title>
+        <style>
+            .k_tbdr{
+                border: 5px solid purple;
+                padding: 5px;
+                width: 100%;
+                height: 500PX;
+            }
+            div{
+                border: 5px solid purple;
+                padding: 5px;
+                width: 100%;
+                height: 400PX;
+            }
+            
+            ul{
+                border: 5px solid red;
+                padding: 5px;
+                width: 100%;
+                height: 300PX;
+            }
+            li{
+                border: 5px solid yellow;
+                padding: 5px;
+                width: 100%;
+                height: 50PX;
+            }
+            span{
+                display: block;
+                width: 100%;
+                height: 20PX;
+                border: 5px solid green;
+                padding: 5px;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <div class="k_tbdr">
+            DIV 1
+            <div>
+                DIV 2
+                <ul>
+                    UL 
+                    <li>
+                        LI 1
+                        <span>
+                            SPAN 1
+                        </span>
+                    </li>
+                    <li>
+                        LI 2
+                        <span>
+                            SPAN 2
+                        </span>
+                    </li>
+                    <li>
+                        LI 3
+                        <span>
+                            SPAN 3
+                        </span>
+                    </li>
+                    <li>
+                        LI 4
+                        <span>
+                            SPAN 4
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <script>
+
+            //$(selector).action()
+            $('span').parentsUntil('div').css({'border-color':'black'})
+        </script>
+    </body>
+</html>
