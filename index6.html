@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ParentUntil</title>
+        <title>Document</title>
         <style>
             .k_tbdr{
                 border: 5px solid purple;
@@ -39,7 +39,16 @@
                 padding: 5px;
             }
         </style>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            //page loaded
+            $(document).ready(function($){
+                //alert('ok');
+                //$(selector).action();
+                $('span').closest('div').css({'color':'red','font-size':'1.5em'});
+            })
+        </script>
     </head>
     <body>
         <div class="k_tbdr">
@@ -75,12 +84,8 @@
                 </ul>
             </div>
         </div>
-
-
         <script>
 
-            //$(selector).action()
-            $('span').parentsUntil('ul').css({'border-color':'black','font-family':'Arial','color':'orange'})
         </script>
     </body>
 </html>
