@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div{
+                border:10px solid black;
+                padding:20px;
+            }
+            div>ul{
+                border: 10px solid red;
+                padding:20px;
+            }
+            div>ul>li{
+                border: 10px solid green;
+                padding:20px;
+            }
+            div>ul>li>a{
+                display:block;
+                border: 10px solid purple;
+                padding:20px;
+            }
+            div>ul>li>a>span{
+                display:block;
+                border: 10px solid orangered;
+                padding:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            div
+            <ul>
+                ul
+                <li>
+                    li
+                    <a href="">
+                        a
+                        <span>span</span>
+                    </a>
+                </li>
+                <li>
+                    li
+                    <a href="">
+                        a
+                        <span>span</span>
+                        <p>Anil</p>
+                    </a>
+                </li>
+                <li>
+                    li
+                    <a href="">
+                        a
+                        <span>span</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+
+            //1. Check for page load 
+                //1.1 ()();
+                //1.2 jQuery(function($){});
+                //1.3 $(document).ready(function($){});
+                $(document).ready(function($){
+                    //alert('OKOKOK');
+
+                    //Traversing Down
+                    //1. chidren() direct child
+
+                    //$(selector).action();
+                    $("ul").children().css("border","50px solid yellow");
+
+                    /* 
+                        var x = $("ul").children();
+                        x.css("border","50px solid yellow") 
+                    */
+
+                });
+            //2. Direct
+            //find method is traversign down method
+            //$(selector).action();
+            $('div').find('p').css({'border':'30px dashed black'})
+
+        </script>
+    </body>
+</html>

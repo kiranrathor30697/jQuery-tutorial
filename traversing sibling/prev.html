@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Traversing Siblings</title>
+        <style>
+            div{
+                border:10px solid red;
+            }
+            h1{
+                border: 10px solid pink;
+            }
+            h2{
+                border: 10px solid purple;
+            }
+            p{
+                border:10px solid blue;
+            }
+            span{
+                display: block;
+                border: 10px solid green;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <div>
+            <h1>h1</h1>
+            <p>p1</p>
+            <p>p2</p>
+            <h2>h2</h2>
+            <p>p3</p>
+            <p>p4</p>
+            <span>span</span>
+        </div>
+
+        <script>
+             //without page loaded jQuery writtn the code this block
+             $('h2').prev().css({'color':'green','font-size':'3em'});
+
+        </script>
+    </body>
+</html>
